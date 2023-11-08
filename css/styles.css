@@ -25,6 +25,10 @@ section {
     flex-direction: column;
 }
 
+.section img {
+    margin: 0 20px; /* Aanpassing van de margin om de afbeeldingen meer naar de zijkanten te verplaatsen */
+}
+
 .container {
     width: 100%;
     margin: 0 auto;
@@ -32,6 +36,7 @@ section {
 }
 
 .hamburger-menu {
+    display: none;
     flex-direction: column;
     cursor: pointer;
     position: fixed; /* add position: fixed */
@@ -58,7 +63,7 @@ section {
 }
 
 #toggle:checked + .menu {
-    display: block;
+    display:  flex; 
     position: fixed;
     top: 0;
     left: 0;
@@ -66,6 +71,8 @@ section {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 1;
+    align-items: center; /* Center the menu items */
+    justify-content: center; /* Center the menu items */
 }
 
 .menu a {
@@ -132,4 +139,16 @@ section {
     to {
         transform: rotate(360deg);
     }
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo {
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
 }
