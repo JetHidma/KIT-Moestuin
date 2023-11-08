@@ -1,3 +1,4 @@
+/* CSS styles for the menu */
 .header {
     position: fixed;
     top: 0;
@@ -5,6 +6,7 @@
     background-color: rgba(255, 255, 255, 0.5); 
     text-align: center;
     font-family: Arial, sans-serif;
+    left: 0; /* Set left to 0 to fill the screen width */
 }
 
 .header h2 {
@@ -12,6 +14,7 @@
     padding: 20px 0; 
     text-align: center !important;
 }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -26,7 +29,7 @@ section {
 }
 
 .section img {
-    margin: 0 20px; /* Aanpassing van de margin om de afbeeldingen meer naar de zijkanten te verplaatsen */
+    margin: 0 20px;
 }
 
 .container {
@@ -35,44 +38,51 @@ section {
     text-align: center !important;
 }
 
-/* Dropdown button */
 .dropbtn {
     background-color: transparent;
     color: black;
     padding: 16px;
-    font-size: 24px; /* Adjust the font size */
+    font-size: 24px;
     border: none;
     cursor: pointer;
-    width: 100%; /* Make the button width 100% */
-    text-align: center; /* Center the text */
+    width: 100%;
+    text-align: center;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
-    display: block; /* Change display to block */
-    width: 100%; /* Make the width 100% */
-    text-align: center; /* Center the dropdown */
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
-/* Dropdown Content (Hidden by Default) */
+#toggle {
+    display: none;
+}
+
+#toggle:checked + .dropdown-content {
+    display: block;
+}
+
+/* Adjust the styles for the dropdown content */
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: fixed; /* Change position to fixed */
     background-color: rgba(1, 76, 9, 1);
-    width: 100%; /* Make the dropdown width 100% */
-    height: 100vh; /* Make the height 100% of the viewport */
+    width: 100%;
+    height: 100vh;
     z-index: 1;
-    top: 100px; /* Adjust the distance from the top as needed */
-    padding: 20px; /* Add padding for better appearance */
-    box-sizing: border-box; /* Include padding in the total width */
+    top: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+    left: 0; /* Set left to 0 to fill the screen width */
 }
 
-/* Adjust the font size and padding of the menu items */
+/* Adjust the styling of the menu items */
 .dropdown-content a {
     display: block;
-    font-size: 28px; /* Adjust the font size of the menu items */
-    padding: 30px; /* Adjust the padding of the menu items */
+    font-size: 28px;
+    padding: 30px;
     text-decoration: none;
     color: white;
 }
@@ -82,19 +92,16 @@ section {
     margin-bottom: 20px;
 }
 
-
-
-
+/* Adjust the styles for the hamburger menu */
 .hamburger-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: fixed; /* add position: fixed */
-    top: 20px; /* adjust the distance from the top as needed */
-    right: 20px; /* set the button to the right side */
-    z-index: 2; /* make sure it's above the other elements */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
 }
-
 
 .hamburger-menu span {
     width: 30px;
@@ -104,43 +111,15 @@ section {
     display: block;
 }
 
-#toggle {
-    display: none;
-}
-
-.menu {
-    display: none;
-}
-
-#toggle:checked + .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    z-index: 1;
-}
-.menu a {
-    display: block;
-    font-size: 24px;
-    padding: 20px;
-    text-decoration: none;
-    color: black;
-    background-color: rgb(1, 76, 9);
-    margin: 5px;
-}
+/* Your other CSS styles */
 
 .wormenhotel {
     background-image: url('../images/achtergrondwormenhotel.png');
     background-size: cover;
     min-height: 100vh;
     background-repeat: no-repeat;
-    padding: 17%
+    padding: 17%;
+    margin: 0;
 }
 
 .text-section {
@@ -149,21 +128,22 @@ section {
     justify-content: space-between;
     margin: 20px;
 }
+
 .text-section-reverse {
     flex-direction: row-reverse;
 }
 
 .text-section p, .text-section-reverse p {
-    width: 50%; /* Adjust the width as needed */
+    width: 50%;
 }
 
 .text-section img, .text-section-reverse img {
-    width: 100px; /* Adjust the width as needed */
-    height: 100px; /* Adjust the height as needed */
+    width: 100px;
+    height: 100px;
 }
 
 .rotate-image {
-    animation: rotation 10s infinite linear; /* Adjust the animation duration as needed */
+    animation: rotation 10s infinite linear;
 }
 
 @keyframes rotation {
@@ -183,28 +163,20 @@ section {
 }
 
 .logo {
-    width: 200px; /* Adjust the width as needed */
-    height: 200px; /* Adjust the height as needed */
+    width: 200px;
+    height: 200px;
 }
-
 
 @media only screen and (max-width: 600px) {
     .container {
         width: 100%;
     }
-    
+
     .header h2 {
         text-align: center;
     }
 
     .hamburger-menu {
         display: flex;
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
 }
