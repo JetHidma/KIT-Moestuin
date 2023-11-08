@@ -10,45 +10,34 @@
     <div class="header">
         <h2>Wormenhotel</h2>
     </div>
-    <div class="container">
-        <div class="dropdown">
-            <button onclick="toggleDropdown()" class="dropbtn">
-                <div class="hamburger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="../index.html">Home</a>
-                <a href="../html/wormenhotel.html">Wormenhotel</a>
-                <a href="../html/informatie.html">Informatie</a>
+    <div class="dropdown">
+        <label for="toggle" class="dropbtn">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+        </label>
+        <input type="checkbox" id="toggle" />
+        <div class="dropdown-content">
+            <a href="../index.html">Home</a>
+            <a href="../html/wormenhotel.html">Wormenhotel</a>
+            <a href="../html/informatie.html">Informatie</a>
         </div>
-        <main>
-                <div class="text-section">
-                    <img src="../images/worm2.png" alt="worm" class="rotate-image">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div class="text-section text-section-reverse">
-                    <img src="../images/worm1.png" alt="worm" class="rotate-image">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div class="text-section">
-                    <img src="../images/worm3.png" alt="worm" class="rotate-image">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-        </main>
     </div>
-    <script>
-        function toggleDropdown() {
-            var dropdownContent = document.getElementById("myDropdown");
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-        }
-    </script>
+    <main>
+        <div class="text-section">
+            <img src="../images/worm2.png" alt="worm" class="rotate-image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="text-section text-section-reverse">
+            <img src="../images/worm1.png" alt="worm" class="rotate-image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="text-section">
+            <img src="../images/worm3.png" alt="worm" class="rotate-image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </main>
 </body>
 </html>
