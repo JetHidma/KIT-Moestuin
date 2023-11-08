@@ -36,7 +36,7 @@ section {
 }
 
 .hamburger-menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
     position: fixed; /* add position: fixed */
