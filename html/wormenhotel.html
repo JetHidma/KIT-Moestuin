@@ -11,16 +11,19 @@
         <h2>Wormenhotel</h2>
     </div>
     <div class="container">
-        <input type="checkbox" id="toggle"/>
-        <label class="hamburger-menu" for="toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <div class="menu">
-            <a href="../index.html">Home</a>
-            <a href="../html/informatie.html">Informatie</a>
-            <a href="../html/wormenhotel.html">Wormenhotel</a>
+        <div class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../index.html">Home</a>
+                <a href="../html/wormenhotel.html">Wormenhotel</a>
+                <a href="../html/informatie.html">Informatie</a>
+            </div>
         </div>
         <main>
                 <div class="text-section">
@@ -37,5 +40,15 @@
                 </div>
         </main>
     </div>
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("myDropdown");
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
