@@ -1,0 +1,135 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.header h2 {
+    margin: 0;
+    padding: 20px 0; 
+    text-align: center !important;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center !important;
+}
+
+.hamburger-menu {
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed; /* add position: fixed */
+    top: 20px; /* adjust the distance from the top as needed */
+    right: 20px; /* set the button to the right side */
+    z-index: 2; /* make sure it's above the other elements */
+}
+
+
+.hamburger-menu span {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    display: block;
+}
+
+#toggle {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+#toggle:checked + .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.menu a {
+    display: block;
+    font-size: 24px;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(1, 76, 9);
+    margin: 5px;
+}
+
+.wormenhotel {
+    background-image: url('../images/achtergrondwormenhotel.png');
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    padding: 17%
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.text-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+.text-section-reverse {
+    flex-direction: row-reverse;
+}
+
+.text-section p, .text-section-reverse p {
+    width: 50%; /* Adjust the width as needed */
+}
+
+.text-section img, .text-section-reverse img {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+}
+
+.rotate-image {
+    animation: rotation 10s infinite linear; /* Adjust the animation duration as needed */
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
