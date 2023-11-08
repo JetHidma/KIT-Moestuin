@@ -6,19 +6,36 @@
 </head>
 <body class="index">
     <div class="container">
-        <input type="checkbox" id="toggle"/>
-        <label class="hamburger-menu" for="toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <div class="menu">
-            <a href="../index.html">Home</a>
-            <a href="../html/informatie.html">Informatie</a>
-            <a href="../html/wormenhotel.html">Wormenhotel</a>
-        </div>
+            <div class="dropdown">
+                <button onclick="toggleDropdown()" class="dropbtn">
+                    <div class="hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="../index.html">Home</a>
+                    <a href="../html/wormenhotel.html">Wormenhotel</a>
+                    <a href="../html/informatie.html">Informatie</a>
+                </div>
+            </div>
         <h1>Welkom op mijn website</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
+
+    <div class="logo-container">
+        <img src="images/logo.png" alt="logo" class="logo">
+    </div>
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("myDropdown");
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
